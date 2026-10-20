@@ -35,8 +35,11 @@ jobs:
         working-directory: frontend
         run: npm ci
 
-      - name: Build website
+            - name: Build website
         working-directory: frontend
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
         run: npm run build
 
       - name: Setup Pages
