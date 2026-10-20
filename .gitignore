@@ -3,3 +3,10 @@ dist/
 .env
 .env.*
 !.env.example
+.env
+.env.*
+!.env.example
+
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
